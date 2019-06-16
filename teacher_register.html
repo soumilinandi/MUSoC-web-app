@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css"
+        href="css/DESIGNreg.css">
+        <script src="js/cities.js"></script>
+
+</head>
+<body>
+
+<h2><center>Teacher Registration</center></h2>
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+    </div>
+  </div>
+  <div class="row"> 
+    <div class="col-25">
+        <label for="email">Email</label>
+     </div>
+     <div class="col-75">
+         <input type="email" id="email" name="emailid" placeholder="Your email id.." autocomplete="off" required>
+     </div>
+  </div>
+  <div class="row">
+        <div class="col-25">
+          <label for="pwd">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" id="pwd" name="pwd" placeholder="Enter password.." required>
+        </div>
+      </div>
+  <div class="row">
+        <div class="col-25">
+          <label for="number">Number</label>
+        </div>
+        <div class="col-75">
+          <input type="tel" id="number" name="number" placeholder="Your phone number.." required>
+        </div>
+      </div>
+  <div class="row">
+        <div class="col-25">
+         <label for="number">State</label>
+        </div>
+        <div class="col-75">
+         <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" style="width:104%;" required></select>
+        </div>
+   </div>
+   <div class="row">
+        <div class="col-25">
+            <label for="number">City</label>
+        </div>
+        <div class="col-75">
+            <select id ="state" class="form-control" style="width:104%;" required></select>
+            <script language="javascript">print_state("sts");</script>
+        </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">About you</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write about your current profession and areas of interest.." style="height:100px" required></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
